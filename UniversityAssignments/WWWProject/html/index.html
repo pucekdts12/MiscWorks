@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/list.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="icon" href="/img/favicon.ico">
+  <script src="/js/dt_ajax.min.js"></script>
+  <script src="/js/main.js"></script>
+
+  <title>Project2</title>
+</head>
+<body>
+  <nav>
+      <form onsubmit="simpleSearch(this);event.preventDefault()">
+        <input type="text" name="title" class="searchbar" placeholder="type something to search" value=""></input>
+        <i class="spacer"></i>
+        <button class="btn search ico" type="submit">
+          <div class="tooltip left box">Search</div>
+        </button>
+
+        <div class="btn tasks ico" onclick="openAdvancedSearch();">
+          <div class="tooltip left box">Advanced Search</div>
+        </div>
+
+        <a class="btn admin ico" href="/admin" target="_blank">
+          <div class="tooltip left box">Admin Panel</div>
+        </a>
+      </form>
+    </nav>
+  <div id="all">    
+    <div id="movies">
+      
+      <%-include("movies_list.html",{"movies":movies,"editable":false})%>
+      
+    </div>
+  </div>
+
+  <div id="overlay" class="hidden"></div>
+  
+
+
+</body>
+</html>

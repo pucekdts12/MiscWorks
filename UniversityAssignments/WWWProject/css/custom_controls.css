@@ -1,0 +1,237 @@
+/*
+    CHECKBOXES
+    format:
+    <label class="CCB">
+      <input type="checkbox"><i>TEXT</i>
+    </label>
+*/
+.CCB{
+  display: flex;
+  cursor: pointer;
+  background-color: rgba(100,100,100,0.1);
+  align-items: center;
+}
+
+.CCB >  input[type="checkbox"]{
+  display:none;
+}
+
+.CCB > i{
+  font-style: normal;
+  user-select: none;
+  flex-grow: 1;
+  transition: 0.5s;
+  margin: 4px;
+  border-bottom: 2px solid transparent;
+  /*border-bottom: 2px solid rgba(120,120,120,0.1);*/
+  
+  text-align: center;
+}
+
+.CCB > input[type="checkbox"]:checked + i{
+  border-color: hsl(200,100%,50%);
+}
+
+.CCB:hover > i{
+  border-color: hsl(200,100%,30%);
+}
+
+
+
+/*
+  RADIO
+  <label class="CRB">
+    <input type="radio" value="V" name="..."><i class="ico">TEXT</i>
+  </label> 
+*/
+.CRB{
+  cursor: pointer;
+  padding: 4px;
+  transition:0.5s;
+  display: flex;
+  align-items: center;
+}
+
+.CRB > i{
+  font-style: normal;
+  user-select: none;
+  border-left: 2px solid #555;
+  padding-left: 0.5em;
+  transition:0.5s;
+}
+
+.CRB > input[type="radio"]{
+  display:none;
+}
+.CRB:hover{
+  background-color: rgba(255,255,255,0.05);
+}
+.CRB:hover > i{
+  border-color: hsl(200,100%,30%);
+}
+
+/*.CRB > input[type="radio"] + i:before{
+  content:"\f0c8";
+  font-family: "Font Awesome 5 Free";
+  font-size:1.2em;
+  font-weight:700;
+  margin-right: 4px;
+  vertical-align: text-top;
+  color:white;
+}
+
+.CRB > input[type="radio"]:checked + i:before{
+  content:"\f14a";
+  
+}*/
+.CRB > input[type="radio"]:checked + i{
+  border-color: hsl(200,100%,50%);
+}
+
+/* RADIO LIST */
+
+.CRL{
+  display:flex;
+  flex-flow:column nowrap;
+}
+.CRL > .CRB,.CRL > .caption{
+  width:100%;
+  flex-grow: 1;
+}
+
+
+
+/*FORM*/
+
+.form{
+  display: flex;
+  flex-flow:row wrap;
+  padding: 0.6rem;
+}
+
+.form .row{
+  display: flex;
+  flex-basis: 100%;
+  flex-flow: row wrap;
+}
+
+.form .col{
+  display: flex;
+  flex-flow:column nowrap;
+}
+
+.input{
+  color: #FFF;
+  font-size: 1.2rem;
+  border: none;
+  background-color: inherit;
+  transition: 1s;
+  padding: 4px;
+}
+
+.input.b{
+  border: 1px solid #555;
+}
+
+.input:hover{
+  background-color: rgba(200,230,255,0.07);
+}
+
+.input:focus{
+  /*background-color: rgba(200,230,255,0.12);*/
+  border-color: hsl(200,100%,50%);
+}
+
+.select{
+  background-color: #222;
+  border: none;
+  font-size: 1.2rem;
+  padding: 4px;
+  transition: 1s;
+  border: 1px solid #555;
+  background-color: inherit;
+}
+
+
+/*BUTTONS*/
+a.btn{
+  text-decoration: none;
+}
+
+.btn{
+  cursor: pointer;
+  position: relative;
+  font-weight: 700;
+  text-align: center;
+  /*line-height: 1.5;*/
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  justify-content: center;
+}
+
+.btn:hover, .btn:hover i{
+  color: hsl(200,100%,50%);
+}
+.btn.close:hover,.btn.del:hover{
+  color: hsl(10,100%,45%);
+}
+
+.btn.blue{
+  background-color: hsl(200,100%,35%);
+}
+
+.btn.green{
+  background-color: hsl(120,100%,30%);
+}
+
+
+.btn.ico::before{
+  font-family: "Font Awesome 5 Free";
+}
+
+.btn.ico.b::before{
+  font-size:1.5em;
+}
+
+.btn.search.ico::before{
+  content:"\f002";
+}
+
+.btn.bars.ico::before{
+  content:"\f0c9";
+}
+
+.btn.tasks.ico::before{
+  content:"\f0ae";
+}
+
+.btn.close.ico::before{
+  content:"\f00d";
+  font-size: 1.3em;
+}
+
+.btn.add.ico::before{
+  content:"\f0fe";
+}
+
+.btn.mod.ico::before{
+  content:"\f14a";
+}
+
+.btn.del.ico::before{
+  content:"\f2ed";
+}
+
+.btn.link.ico::before{
+  content:"\f35d";
+}
+
+.btn.edit.ico::before{
+  content:"\f044";
+}
+
+
+.btn.admin.ico::before{
+  content:"\f085";
+}

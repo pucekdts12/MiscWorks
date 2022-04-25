@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/list.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="icon" href="/img/favicon.ico">
+  <script src="/js/dt_ajax.min.js"></script>
+  <script src="/js/main.js"></script>
+
+  <title>Project2</title>
+</head>
+<body>
+  <div id="all">
+    <nav>
+      <form onsubmit="simpleSearch(this);event.preventDefault()">
+        <input type="text" name="title" class="searchbar" placeholder="type something to search" value=""></input>
+        <i class="spacer"></i>
+        <button class="btn search ico" type="submit">
+          <div class="tooltip left box">Search</div>
+        </button>
+        <div class="btn tasks ico" onclick="openAdvancedSearch();">
+          <div class="tooltip left box">Advanced Search</div>
+        </div>
+      </form>
+    </nav>
+
+    <div id="movies">
+
+      <div id="movie" class="col">
+        <div class="cross">
+          <img class="posterlarge" src="/<%=movie.poster%>" alt="" />
+          <div class="col">
+            <div class="title"><%=movie.title%></div>
+            <div class="pos"><span class="legend">First aired:</span><span class="value"><%=movie.year%></span></div>
+            <div class="pos"><span class="legend">Type:</span><span class="value"><%=movie.type%></span></div>
+            <div class="pos"><span class="legend">Genres:</span><span class="value"><%=genres.join(', ')%></span></div>
+            <div class="pos"><span class="legend">Score:</span><span class="value"><%=movie.rating.toFixed(1)%></span></div>
+          </div>
+        </div>
+        <div class="description">
+          Dummy Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, vel molestias adipisci temporibus dignissimos distinctio repellendus optio sapiente soluta quas nihil nobis iure blanditiis. Perferendis, quae voluptatum doloribus nam. Dicta?
+          Possimus illo eius adipisci, modi at consequatur cupiditate sed reprehenderit perferendis eaque, quidem vel. Error autem velit iure voluptatum, quisquam, sequi vel officia ea aspernatur, assumenda consectetur quae minima, deleniti?
+          Autem placeat numquam aut. Delectus ab laudantium earum totam dignissimos obcaecati minus repudiandae rem facere fugiat quam aliquid rerum cupiditate numquam, placeat enim perferendis, ipsam ad accusamus alias nam quis.
+          Nisi, illum. Aspernatur doloremque esse labore modi, saepe, repellendus ipsum, exercitationem totam veritatis quae enim sapiente excepturi minima consequuntur laboriosam unde deserunt rerum voluptatibus obcaecati! Enim earum sunt est rerum.
+          A voluptatum, reprehenderit quo tempora in ut. Dolorem totam dignissimos, illum exercitationem consectetur cupiditate quasi, aperiam tempora ipsum voluptatibus, dolore vitae sint nisi iusto perspiciatis quaerat dicta quas cumque quam.
+          Dolore quod nemo quaerat veniam enim voluptate fugiat alias tenetur ratione ipsum, officiis ducimus eos minus nesciunt atque inventore nisi, assumenda ullam aliquid aliquam, incidunt! Eum, ad nam maxime voluptas.
+          Placeat corporis sapiente necessitatibus doloribus ipsa atque, exercitationem ad, fugit error, tempora totam doloremque esse aspernatur quia. At possimus magnam inventore, doloremque fugit voluptates est ipsum, vel! Magnam, excepturi, suscipit?
+          Quod tenetur, sunt soluta quae eligendi laudantium tempore, culpa illum praesentium aspernatur odio exercitationem ut unde reiciendis nam, debitis expedita repellendus quibusdam alias nemo aliquam? Nesciunt suscipit expedita distinctio, atque!
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div id="overlay" class="hidden"></div>
+  
+</body>
+</html>

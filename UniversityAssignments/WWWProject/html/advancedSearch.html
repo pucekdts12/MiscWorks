@@ -1,0 +1,30 @@
+<form id="advancedSearch" onsubmit="advancedSearch(this);event.preventDefault();">
+    <div class="row head">
+      <input class="searchbar" type="text" placeholder="type something to search..." name="title">
+      <i class="spacer"></i>
+      <button class="btn search ico" type="submit"></button>
+      <div class="btn close ico" onclick="closeOverlay(true);"></div>
+    </div>
+    <div class="row title">Select genres:</div>
+    <div class="row">
+      <div class="options">
+      <% genres.forEach(function(e){ %>
+        <%- `<label class="option CCB">
+            <input type="checkbox" name="genres" value="${e.id}">
+            <i>${e.name}</i>
+          </label>` %>
+      <% }); %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="CRL">
+        <div class="caption">Type:</div>
+        <% types.forEach(function(e){ %>
+          <%- `<label class="CRB">
+            <input type="radio" value="${e.id}" name="type" ${e.checked}><i class="ico">${e.name}</i>
+          </label> `%>
+        <%})%>
+      </div>
+    </div>
+
+  </form>

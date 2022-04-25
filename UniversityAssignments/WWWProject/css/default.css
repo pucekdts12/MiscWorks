@@ -1,0 +1,390 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  /*font-family:Trebuchet MS;*/
+  font-family:Rajdhani-Light;
+  color: white;
+}
+
+/*
+    #151617
+    #090A0A
+    #151516
+*/
+
+body,html{
+  width:100%;
+  height:100%;
+  background-color: #171819;
+}
+
+#all{
+  width: 1024px;
+  height:100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#clock{
+  position:fixed;
+  bottom: 4px;
+  right: 4px;
+  text-shadow:0 0 5px #000;
+  font-size: 1.4em;
+}
+
+#header{
+  text-align:center;
+}
+
+#banner{
+}
+
+nav{
+  width: 100%;
+  position: fixed;
+  left:0;top:0;
+  height: 4rem;
+  z-index: 10;
+}
+
+nav > form{
+  width: 100%;
+  padding: 0.6em;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-shrink: 0;
+  margin-bottom: 1em;
+  box-shadow: 0 0 5px #568;
+  background-color: #151517;
+  height: 100%;
+}
+
+nav > form > *{
+  padding: 8px;
+}
+nav > form > .spacer{
+  padding: 0;
+  margin-left: 0;
+}
+
+
+
+nav > form > .searchbar{
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  line-height: 120%;
+  font-size: 1.5rem;
+  /*border-right: 2px solid #555;*/
+}
+
+
+nav > form > .btn{
+  font-size: 1.5em;
+  color: #FFF;
+}
+
+#movies{
+  width: 100%;
+  flex-grow: 1;
+}
+
+.movie{
+  width:100%;
+  display:flex;
+  flex-flow:row nowrap;
+  background-color: hsl(200,15%,6%);
+  border-radius: 5px;
+  margin-bottom: 4px;
+  align-items: center;
+  /*align-content: stretch;
+  justify-content: stretch;*/
+  transition: 0.5s;
+}
+
+.movie:hover{
+  background-color: hsl(200,15%,8%);
+}
+
+.movie .title{
+  transition: 0.5s;
+  flex-grow: 1;
+
+}
+.movie .title h1{
+  flex-grow: 1;
+}
+
+.movie .title i.type{
+  font-style: normal;
+  font-size: 1.4rem;
+  color: hsl(0,0%,40%);
+  padding: 4px;
+
+}
+
+.movie .title .link,.movie .title .edit{
+  font-size: 0.8rem;
+  padding: 6px;
+  text-align: right;
+  /*flex-grow: 1;*/
+  justify-content: right;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.movie .title .edit{
+  font-style: normal;
+}
+
+.movie .title .row{
+}
+
+.movie .cross{
+  display: flex;
+  flex-flow: row nowrap;
+  flex-grow: 1;
+  padding: 0.8rem;
+}
+
+.movie:hover .title{
+  color: hsl(200,100%,50%);
+}
+
+.movie .poster{
+  height: 8rem;
+  width: 6rem;
+  margin: 0.8rem;
+  cursor: zoom-in;
+  object-fit: contain;
+}
+
+.movie .title{flex-grow: 1;}
+
+.movie .year{
+  font-size: 1.2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.movie .rating{
+  font-size: 1.6rem;
+  font-weight: 700;
+  /*color: hsl(200,80%,50%);*/
+  color: hsl(0,0%,80%);
+}
+
+.movie .rating::after{
+  content:"/10";
+  font-size: 1.1rem;
+  font-weight: normal;
+  /*color: hsl(200,10%,80%);*/
+  color: hsl(0,0%,50%);
+}
+
+
+#movie{
+  background-color: hsl(200,15%,6%);
+  border:2px solid hsl(0,0%,16%);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+#movie .title{
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+#movie .pos{
+}
+#movie .pos .legend{
+  display: inline-block;
+  width: 5rem;
+}
+#movie .pos .value{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#movie .posterlarge{
+  object-fit: contain;
+  height: 300px;
+  margin-right: 1rem;
+}
+
+#movie .description{
+  border-top:2px solid hsl(200,100%,20%);
+  margin-top: 1rem;
+  padding: 0.5rem 0 0 0;
+}
+
+
+#advancedSearch{
+  background-color:#151719;
+  padding: 0.6rem;
+  min-width:40vw;
+  display: flex;
+  flex-flow:row wrap;
+  box-shadow:0 0 5px #556;
+  border-radius: 8px;
+}
+
+#advancedSearch .row{
+  display: flex;
+  flex-basis: 100%;
+}
+
+#advancedSearch .row.title{
+  font-size: 1.2em;
+}
+
+#advancedSearch .row.head{
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #333;
+  padding: 0.5em;
+}
+
+#advancedSearch .row.head .spacer{
+  margin:0 6px 0 0;
+}
+
+#advancedSearch .head .btn.ico{
+  margin-right:0.5em;
+}
+
+#advancedSearch .head .btn.ico:last-child{
+  margin-right:0;
+}
+
+#advancedSearch .row > .CRL{
+  flex-grow: 1;
+}
+
+#advancedSearch .searchbar{
+  font-size: 1.3em;
+  flex-grow: 1;
+  /*border-right: 2px solid #555;*/
+  padding: 4px 0.5em;
+}
+
+#advancedSearch .btn.ico{
+  font-size: 1.3em;
+}
+
+#advancedSearch .btn.ico{
+  font-size: 1.3em;
+}
+
+#advancedSearch .options{
+  flex-basis:100%;
+  display: flex;
+  padding: 0.5em;
+  flex-flow: row wrap;
+  margin: 0 auto;
+}
+
+#advancedSearch .option{
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-bottom: 2px;
+}
+
+
+#advancedSearch .options > .option{
+  flex-basis: 24%;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 2px;
+}
+
+
+
+#advancedSearch .options > .option:hover{
+  background-color: rgba(255,255,255,0.05);
+}
+
+#advancedSearch .CRL{
+  font-size:1.2em;
+}
+
+.posterLarge{
+  width:100%;
+  height:100%;
+  padding:3em;
+  object-fit: contain;
+}
+
+
+.searchbar{
+  color: #FFF;
+  border: none;
+  background-color: inherit;
+  transition: 1s;
+  border-radius: 4px;
+}
+
+.searchbar:hover{
+  background-color: rgba(200,230,255,0.07);
+}
+
+.searchbar:focus{
+  background-color: rgba(200,230,255,0.12);
+}
+
+#preview{
+  width: 200px;
+}
+
+#editmovie{
+  margin: 0 auto;
+  width: 60vw;
+  font-size: 1.2rem;
+}
+
+#editmovie #inputs{
+  flex-grow:1;
+  padding: 4px;
+}
+
+#editmovie .select option{
+  color: #FFF;
+  background-color: rgba(0,0,0,255);
+}
+
+#editmovie #buttons{
+  border-top: 1px solid #555;
+  margin-top: 0.5rem;
+}
+#editmovie #buttons .btn.mod,
+#editmovie #buttons .btn.add,
+#editmovie #buttons .btn.del{
+  font-size: 20px;
+}
+
+
+
+#editmovie #genres .CCB{
+  padding: 4px;
+  margin: 2px;
+}
+
+
+
+
+.row{
+  display: flex;
+  flex-flow: row nowrap;
+}
+.cross{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.cl{
+  cursor: pointer;
+}

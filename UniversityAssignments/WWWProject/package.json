@@ -1,0 +1,17 @@
+{
+  "name": "TechnikiWWW_Projekt2",
+  "version": "0.0.1",
+  "description": "TechnikiWWW Projekt2 - Baza filmów - node,express,ejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^7.1.2",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1"
+  }
+}

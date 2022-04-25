@@ -1,0 +1,25 @@
+<div class="movie">
+  <img class="poster from_m" src="/<%=poster%>" alt="<%=title%>" >
+  </img>
+  
+  <div class="cross">
+    <div class="col title">
+      <div class="row"><h1><%=title%><%-(type==1?'<i class="type">(TV)</i>':'')%></h1>
+        <%if(editable){%>
+          <a class="btn ico edit" href="/edit/<%-id%>" target="_blank">
+            <div class="tooltip left box">Edit</div>
+          </a>
+        <%}else{%>
+          <a class="btn ico link" href="/info/<%-id%>" target="_blank">
+            <div class="tooltip left box">Open</div>
+          </a>
+        <%}%>
+      </div>
+      <div class="genres from_m"><%=genres.join(', ')%></div>
+    </div>
+    <div class="info from_m">
+      <div class="year"><%=year%></div>
+      <div class="rating"><%=rating.toFixed(1)%></div>
+    </div>
+  </div>
+</div>

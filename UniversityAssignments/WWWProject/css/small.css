@@ -1,0 +1,84 @@
+/*@media screen and (max-width:500px) {*/
+#banner{
+  font-size: 2rem;
+}
+
+.movie{
+  /*flex-flow: row wrap !important;
+  padding:0;*/
+}
+
+.movie .poster img{
+
+}
+
+#movies{
+  /*background-color: rgba(0,0,0,0.6);*/
+}
+
+.movie{
+  /*border-radius: 0;*/
+  cursor: pointer;
+}
+
+.movie .cross{
+  flex-flow: column nowrap !important;
+}
+
+.movie .title{
+  flex-grow: 0;
+  
+}
+
+.movie .poster{
+  /*border-top:1px solid #555;*/
+}
+
+.movie .info{
+  flex-grow:1;
+  /*border-top:1px solid #555;*/
+}
+
+#movie .description{
+  border-top:2px solid hsl(200,100%,50%);
+  padding: 0.5rem 0 0 0;
+}
+
+
+nav > form{
+  /*flex-flow:row wrap !important;*/
+}
+nav > form > .searchbar {
+  /*border-right: none !important;*/
+  /*flex-basis:100%;
+  border-bottom:1px solid #DDD !important;
+  margin-bottom: 0.5em;*/
+}
+
+nav > form > .btn {
+  /*flex-grow:1;*/
+  padding: 6px;
+}
+
+#advancedSearch{
+  width:100vw;
+}
+
+#advancedSearch .options > .option{
+  flex-basis: 32%;
+}
+
+#editmovie{
+  margin: 0;
+  width: 100vw;
+}
+
+.from_m{display: none !important;}
+.alwaysShow .from_m{display:unset !important;}
+
+.cross{
+  flex-flow: column nowrap !important;
+}
+
+/*.alwaysShow .from_m{display: inherit !important;}*/
+/*}*/

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="icon" href="/img/favicon.ico">
+  <script src="/js/dt_ajax.min.js"></script>
+  <script src="/js/main.js"></script>
+
+  <title>Project2</title>
+</head>
+<body>
+  <form id="editmovie" class="form" method="POST" action="/edit" enctype="multipart/form-data">
+    <div class="row head">
+      <label class="col">
+        <span>Choose Poster File</span>
+        <input class="hidden" type="file" onchange="previewPoster(this,'#preview');" name="posterfile" value="">
+        <img src="/<%-movie.poster%>" id="preview" alt="Click here to select file." class="poster" />
+      </label>
+
+      <div id="inputs" class="col">
+        <div class="col">
+          <span>Title:</span>
+          <input class="input b" type="text" name="title" placeholder="movie title" value="<%-movie.title%>">
+        </div>
+
+        <div class="col">
+          <span>Year:</span>
+          <input class="input b" type="number" name="year" value="<%-movie.year%>"/>
+        </div>
+
+        <div class="col">
+          <span>Rating:</span>
+          <input class="input b" type="number" name="rating" min="0" max="10" step="0.1" value="<%-movie.rating%>" />
+        </div>
+
+        <div class="col">
+          <span>Type:</span>
+          <select name="type" class="select" >
+            <% types.forEach(function(t){ %>
+            <%- `<option value="${t.id}" ${(t.id==movie.type?'selected':'')}>${t.name}</option>` %>
+          <% }); %>
+          </select>
+        </div>
+
+      </div>
+      
+    </div>
+
+    <div class="row title">Genres:</div>
+    <div id="genres" class="row">
+      <% genres.forEach(function(g){ %>
+        <%- `<label class="CCB">
+            <input type="checkbox" name="genres" value="${g.id}" ${(g.checked>0?'checked':'')}>
+            <i>${g.name}</i>
+          </label>` %>
+      <% }); %>
+    </div>
+
+
+    
+    <div id="buttons" class="row">
+      <button class="btn <%=( movie.id==-1 ? 'add' : 'mod' )%> ico b" type="submit"></button>
+      <%if(movie.id!=-1){%>
+        <a class="btn del ico b" href='/removemovie?id=<%=movie.id%>'></a>
+      <%}%>
+    </div>
+
+    <input type="hidden" name="id" value="<%-movie.id%>">
+  </form>
+
+
+
+
+  <div id="overlay" class="hidden"></div>
+</body>
+</html>
