@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import mandelbrot.ResizableCanvas?>
+<?import mandelbrot.MyPane?>
+<VBox xmlns:fx="http://javafx.com/fxml" stylesheets="/res/mandelbrot.css" fx:id="root" fx:controller="mandelbrot.MandelbrotController">
+  <HBox fx:id="menu">
+    <Button text="Draw" onAction="#draw"/><TextField fx:id="flWidth"/><Label styleClass="dtlabel" text="x"/><TextField fx:id="flHeight"/><TextField fx:id="flTL" text="-2+1i"/><TextField fx:id="flBR" text="2-1i"/><Label styleClass="dtlabel" text="R:"/><TextField fx:id="flR" text="2"/><Button text="Update" onAction="#update"/><Button text="Reset" onAction="#reset"/>
+  </HBox>
+  <MyPane fx:id="canvasPane" width="800.0" height="800.0">
+    <Canvas fx:id="mainCanvas" width="${canvasPane.width}" height="${canvasPane.height}"/>
+    <Canvas fx:id="selectCanvas" width="${canvasPane.width}" height="${canvasPane.height}"/>
+  </MyPane>
+</VBox>

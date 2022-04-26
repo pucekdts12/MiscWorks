@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.shape.Rectangle?>
+
+<?import dts.MyPane?>
+<!--VBox xmlns:fx="http://javafx.com/fxml" fx:id="root" fx:controller="mandelbrot.MandelbrotController"-->
+<VBox xmlns:fx="http://javafx.com/fxml" stylesheets="/res/galaga.css" fx:id="root" fx:controller="galaga.Controller">
+    <!--Group fx:id="game" width="600.0" height="600.0"-->
+    <!--HBox fx:id="menu"><Label text="Score: "/><Label fx:id="score" text="0"/></HBox-->
+    <AnchorPane> <HBox AnchorPane.rightAnchor="0.0"><Label text="Score: "/><Label fx:id="score" text="0" /></HBox> </AnchorPane>
+    <MyPane fx:id="game" width="400.0" height="400.0">
+      <Canvas fx:id="enemies" width="${game.width}" height="${game.height}"/>
+      <!--Rectangle fx:id="bg" width="${game.width}" height="${game.height}"/-->
+    </MyPane>
+</VBox>

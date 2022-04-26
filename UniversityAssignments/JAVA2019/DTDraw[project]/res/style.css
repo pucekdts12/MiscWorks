@@ -1,0 +1,22 @@
+#root{
+  
+}
+
+
+#toolbar{
+  -fx-background-color:#343434;
+  -fx-max-width:250px;
+}
+
+#layers{
+ /*-fx-min-width:400px;
+ -fx-min-height:400px;*/
+ /*-fx-border-color:white;*/
+ -fx-background-color:#FFF;
+}
+#strokeWidthText{
+  /*-fx-background-color:#F00;*/
+  -fx-font-size:1.3em;
+  -fx-min-width:1.5em;
+  -fx-text-fill:#FFF;
+}

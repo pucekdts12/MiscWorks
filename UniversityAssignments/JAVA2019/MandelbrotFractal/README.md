@@ -1,0 +1,1 @@
+In this assigments we had to visualize Mandelbrot set using javafx.

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.paint.Color?>
+
+<?import dtdraw.Layer?>
+<?import dtdraw.ToolButton?>
+
+
+
+<VBox xmlns:fx="http://javafx.com/fxml" stylesheets="/res/style.css" fx:id="root" fx:controller="dtdraw.Controller" >
+  <fx:define>
+    <ToggleGroup fx:id="tools"/>  
+  </fx:define>
+  <HBox>
+    <GridPane fx:id="toolbar">
+      <HBox GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <Button  text="Save" onAction="#save"></Button>
+        <Button  text="Load" onAction="#load"></Button>
+        <Button  text="Undo" onAction="#undo"></Button>
+      </HBox>
+      <!--Button text="StrokeColor"  GridPane.rowIndex="1" GridPane.columnIndex="0" onAction="#strokeColor"/-->
+      <ColorPicker fx:id="strokeColor" GridPane.rowIndex="1" GridPane.columnIndex="0">
+        <value><Color blue="0.0" green="0.0" red="0.0"/></value>
+      </ColorPicker>
+      <ColorPicker fx:id="fillColor" GridPane.rowIndex="2" GridPane.columnIndex="0">
+      </ColorPicker>
+
+      <Slider fx:id="strokeWidth" GridPane.rowIndex="3" GridPane.columnIndex="0" min="0" max="10" value="1" blockIncrement="1"/>
+      <!--Slider fx:id="mySlider" blockIncrement="0.1" layoutX="26.0" layoutY="32.0" majorTickUnit="0.5" max="1.0" minorTickCount="1" showTickLabels="true" showTickMarks="true"/-->
+
+      <Label fx:id="strokeWidthText" GridPane.rowIndex="3" GridPane.columnIndex="1"></Label>
+      
+
+
+
+
+      <TilePane GridPane.columnIndex="0" GridPane.rowIndex="4" >
+        <ToolButton tool="Rectangle" text="[]" selected="true" toggleGroup="$tools" onAction="#change"/>
+        <ToolButton tool="Line" text="|" toggleGroup="$tools" onAction="#change" />
+        <ToolButton tool="Ellipse" text="()" toggleGroup="$tools" onAction="#change" />
+        <ToolButton tool="Polygon" text="[\/]" toggleGroup="$tools" onAction="#change" />
+      </TilePane>
+    </GridPane>
+    <StackPane fx:id="layers">
+      <Layer fx:id="mainLayer" width="800.0" height="800.0"/>
+    </StackPane>
+  </HBox>
+    
+</VBox>

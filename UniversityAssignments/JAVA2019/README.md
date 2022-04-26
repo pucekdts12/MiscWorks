@@ -1,0 +1,1 @@
+Some of my assigments from Java course in 2019.

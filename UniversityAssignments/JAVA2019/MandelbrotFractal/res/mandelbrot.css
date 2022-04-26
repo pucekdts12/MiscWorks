@@ -1,0 +1,37 @@
+#root{
+  -fx-background-color:#343434;
+}
+#mainCanvas{
+  
+}
+
+#menu{
+  -fx-background-color:#343434;
+}
+
+.dtlabel{
+  -fx-font-size: 18px;
+  -fx-font-weight: 700;
+}
+
+#flWidth,#flHeight{
+  -fx-max-width:8em;
+}
+#flR{
+ -fx-max-width:4.0em;
+}
+#flTL,#flBR{
+ -fx-max-width:8em;  
+}
+.label{
+  -fx-text-fill:#FFFFFF;
+  /*-fx-font-size:30px;*/
+}
+.button,.text-field{
+  -fx-padding:3px;
+  -fx-font-size:1.3em;
+}
+.choice-box .label{
+  -fx-text-fill:#000000;
+  /*-fx-background-color:#222222;*/
+}

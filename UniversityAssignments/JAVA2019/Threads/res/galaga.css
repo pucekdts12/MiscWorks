@@ -1,0 +1,23 @@
+#root{
+  -fx-background-color:#050505;
+}
+#menu{
+ /*-fx-background-color:#343434; */
+}
+.button{
+  -fx-border-width:0px;
+  -fx-background-color:#00AAF2;
+  -fx-text-fill:#FFF;
+  -fx-font-size:1.3em;
+  -fx-font-weight:700;
+}
+#score{
+  -fx-font-size:15px;
+  -fx-font-weight:700;
+}
+
+.label{
+  -fx-text-fill:#FFF;
+  -fx-font-size:15px;
+  -fx-font-weight:700;
+}

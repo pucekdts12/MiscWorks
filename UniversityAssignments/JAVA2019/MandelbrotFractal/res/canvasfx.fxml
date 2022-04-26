@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.Canvas?>
+<VBox xmlns:fx="http://javafx.com/fxml" stylesheets="/res/canvasfx.css" fx:id="root" fx:controller="mandelbrot.CanvasController">
+  <Canvas fx:id="mainCanvas" width="800.0" height="600.0"/>
+  <HBox styleClass="bg">
+    <Button text="Clear" onAction="#clear"></Button>
+    <Button text="Rectangle" onAction="#rectangle"></Button>
+    <Button text="Draw" onAction="#draw"></Button>
+    <Button text="Hello" onAction="#hello"></Button>
+  </HBox>
+</VBox>
