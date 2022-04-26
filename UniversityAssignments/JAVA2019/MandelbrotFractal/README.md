@@ -1,1 +1,1 @@
-In this assigments we had to visualize Mandelbrot set using javafx.
+In this assigment we had to visualize Mandelbrot set using javafx.

@@ -1,1 +1,1 @@
-In this assigments we had to use Thread class
+In this assigment we had to use Thread class.
