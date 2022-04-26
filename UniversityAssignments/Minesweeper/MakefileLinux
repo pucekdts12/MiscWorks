@@ -1,0 +1,45 @@
+DEPS:=SDL2
+
+LIBS:=$(addprefix -l,$(DEPS))
+
+LIB_EXT:=.so
+LIB_NAME:=libhelper$(LIB_EXT)
+
+
+LIB_SRC:=helper.c
+LIB_HEADERS:=helper.h
+
+EXE_NAME:=game
+EXE_EXT:=
+EXE_DEPS:=map.h style.h list.h handleArgs.h dt_useful.h
+
+EXE_SRC:=game.c
+
+
+MYCC_FLAGS:=-Wall -Wl,-rpath,. -ansi $(INCLUDES) $(LIB_PATH) -L. $(LIBS)
+
+
+
+CC:=gcc
+
+all:$(LIB_NAME) $(EXE_NAME)
+	
+	
+clean:
+	rm $(LIB_NAME)$(LIB_EXT)
+	rm $(EXE_NAME)$(EXE_EXT)
+	
+test: CC:=@echo $(CC)
+test: all	
+	
+
+	
+$(EXE_NAME): $(EXE_SRC) $(LIB_HEADERS) $(EXE_DEPS)
+	$(CC) $(EXE_SRC) -o $@$(EXE_EXT) $(MYCC_FLAGS) -lhelper
+	
+$(LIB_NAME): $(LIB_SRC) 
+	$(CC) $(LIB_SRC) -o $@ -fPIC $(MYCC_FLAGS) -shared
+	
+	
+	
+	
